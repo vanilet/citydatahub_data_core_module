@@ -2353,7 +2353,6 @@ public abstract class DefaultEntitySVC implements EntitySVCInterface<DynamicEnti
 
                 QueryVO innerQueryVO = (QueryVO) SerializationUtils.clone(queryVO);
                 innerQueryVO.setType(dataModelCacheVO.getDataModelVO().getTypeUri());
-                innerQueryVO.setLinks(null);
                 innerQueryVO.setOffset(queryVO.getOffset());
                 innerQueryVO.setLimit(queryVO.getLimit());
                 List<CommonEntityVO> commonEntityVOs = this.selectAllWithType(innerQueryVO, accept);
